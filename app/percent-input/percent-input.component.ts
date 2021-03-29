@@ -1,14 +1,10 @@
 import { Component, forwardRef, Input, ViewChild } from "@angular/core";
-import {
-  ControlValueAccessor,
-  FormControl,
-  NG_VALIDATORS,
-  NG_VALUE_ACCESSOR
-} from "@angular/forms";
+import { ControlValueAccessor, NG_VALUE_ACCESSOR } from "@angular/forms";
 import { NumericTextBoxComponent } from "@progress/kendo-angular-inputs";
 
 @Component({
   selector: "percent-input",
+  styleUrls: ["./percent-input.component.css"],
   template: `
     <kendo-numerictextbox
       format="#.####\\%"
@@ -26,11 +22,6 @@ import { NumericTextBoxComponent } from "@progress/kendo-angular-inputs";
       useExisting: forwardRef(() => PercentInputComponent),
       multi: true
     }
-    // {
-    //   provide: NG_VALIDATORS,
-    //   useExisting: forwardRef(() => PercentInputComponent),
-    //   multi: true
-    // }
   ]
 })
 export class PercentInputComponent implements ControlValueAccessor {
@@ -55,14 +46,6 @@ export class PercentInputComponent implements ControlValueAccessor {
   onTouched = () => {};
 
   constructor() {}
-
-  // validate(control: FormControl) {
-  //   // if (!control.value) {
-  //   //   return false;
-  //   // }
-  //   // console.log("validate", value);
-  //   return this.child?.validate(control);
-  // }
 
   writeValue(decimalValue: number | null) {
     // we have a new decimal value comming in from the parent

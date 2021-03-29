@@ -3,7 +3,8 @@ import { FormBuilder, Validators } from "@angular/forms";
 
 @Component({
   selector: "my-app",
-  templateUrl: "./app.component.html"
+  templateUrl: "./app.component.html",
+  styleUrls: ["./app.component.css"]
 })
 export class AppComponent {
   public percentDecimals: number = 4;
@@ -20,10 +21,4 @@ export class AppComponent {
     //   this.decimalValue = decimalValue;
     // });
   }
-
-  // onClick() {
-  //   console.log("app.component onClick");
-  //   const feeRate = this.form.get("feeRate");
-  //   feeRate.setValue(feeRate.value + 0.01);
-  // }
 }

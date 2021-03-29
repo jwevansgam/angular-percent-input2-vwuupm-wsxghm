@@ -7,7 +7,7 @@ import { InputsModule } from "@progress/kendo-angular-inputs";
 import "hammerjs";
 
 import { AppComponent } from "./app.component";
-import { PercentInputComponent } from "./percent-input.component";
+import { PercentInputComponent } from "./percent-input/percent-input.component";
 
 @NgModule({
   imports: [

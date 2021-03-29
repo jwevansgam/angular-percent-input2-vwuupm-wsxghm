@@ -10,16 +10,16 @@
     </tr>
     <!-- Decimal Value -->
     <tr>
-      <td>Decimal Value</td>
+      <td>Decimal Value (Required attribute)</td>
       <td>
-        <kendo-numerictextbox [(ngModel)]="decimalValue" name="decimalValue" [decimals]="percentDecimals + 2"
+        <kendo-numerictextbox [(ngModel)]="decimalValue" [required] name="decimalValue" [decimals]="percentDecimals + 2"
           format="#.######">
         </kendo-numerictextbox>
       </td>
     </tr>
     <!-- Percent Value -->
     <tr>
-      <td>Percent Value</td>
+      <td>Percent Value (My Control)</td>
       <td>
         <percent-input [(ngModel)]="decimalValue" name="percentValue" [percentDecimals]="percentDecimals">
         </percent-input>
@@ -27,7 +27,7 @@
     </tr>
     <!-- Percent Value Required -->
     <tr>
-      <td>Percent Value (Required)</td>
+      <td>Percent Value (Required Validator)</td>
       <td>
         <form [formGroup]="form">
           <percent-input formControlName="feeRate" [percentDecimals]="percentDecimals">
@@ -37,7 +37,7 @@
     </tr>
     <!-- Kendo Control Required -->
     <tr>
-      <td>Kendo Control Required</td>
+      <td>Kendo Control (Required Validator)</td>
       <td>
         <form [formGroup]="form">
           <kendo-numerictextbox formControlName="feeRate2" [min]="0" [max]="100" [decimals]="percentDecimals">
